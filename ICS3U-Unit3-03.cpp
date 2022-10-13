@@ -12,7 +12,7 @@ int main() {
     int randomNumber;
     int guessNumber;
 
-    //random generator
+    // random generator
     std::random_device rseed;
     std::mt19937 rgen(rseed());  // mersenne_twister
     std::uniform_int_distribution<int> idist(0, 9);
@@ -25,9 +25,9 @@ int main() {
     // process and output
     if (randomNumber == guessNumber) {
         std::cout << "\nYou guessed right.";
-    }
-    else {
-        std::cout << "\nYou guessed wrong, the number was " << randomNumber << ".";
+    } else {
+        std::cout << "\nYou guessed wrong, the number was "
+        << randomNumber << ".";
     }
 
     std::cout << "\n\n\nDone.\n";
