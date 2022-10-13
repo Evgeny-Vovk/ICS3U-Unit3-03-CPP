@@ -9,25 +9,25 @@
 
 int main() {
     // creating variables
-    int number;
+    int randomNumber;
     int guessNumber;
 
     //random generator
     std::random_device rseed;
     std::mt19937 rgen(rseed());  // mersenne_twister
     std::uniform_int_distribution<int> idist(0, 9);
-    number = idist(rgen);
+    randomNumber = idist(rgen);
 
     // input
     std::cout << "Guess the number from 0 to 9: ";
     std::cin >> guessNumber;
 
     // process and output
-    if (number == guessNumber) {
+    if (randomNumber == guessNumber) {
         std::cout << "\nYou guessed right.";
     }
     else {
-        std::cout << "\nYou guessed wrong, the number was " << number << ".";
+        std::cout << "\nYou guessed wrong, the number was " << randomNumber << ".";
     }
 
     std::cout << "\n\n\nDone.\n";
